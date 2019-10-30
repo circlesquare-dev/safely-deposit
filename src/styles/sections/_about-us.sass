@@ -19,11 +19,21 @@
       left: -103px
       width: 250px
       height: 263px
+      @media(max-width: 736px)
+        width: 175px
+        height: 185px
+        left: -81px
+        top: 0
     .bg-icon2
       bottom: -18px
       right: -142px
       width: 283px
       height: 297px
+      @media(max-width: 736px)
+        width: 198px
+        height: 208px
+        right: -124px
+        bottom: 204px
     .bg-circle1, .bg-circle2
       position: absolute
       left: 0
@@ -41,6 +51,12 @@
         height: 28px
         border-radius: 100%
         opacity: 1
+        @media(max-width: 736px)
+          width: 38px
+          height: 38px
+          left: auto
+          right: -25px
+          top: 50%
       &:after
         content: ''
         position: absolute
@@ -51,7 +67,12 @@
         height: 38px
         border-radius: 100%
         opacity: 1
+        @media(max-width: 736px)
+          left: -19px
+          bottom: 43px
     .bg-circle2
+      @media(max-width: 736px)
+        display: none
       &:before
         content: ''
         position: absolute
@@ -148,7 +169,7 @@
       margin-top: 20px
     .btn_main
       margin-bottom: 38px
-      @media(max-width: 768px)
+      @media(max-width: 767px)
         width: 100%
 
     .small-info
