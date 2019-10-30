@@ -78,18 +78,30 @@
 
 // Parallax animation end
 
-var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-// var mobDev = false;
+// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+var mobDev = false;
 
 $(document).ready( function(){
 
 // Animation just for web start
 	
 	if (!mobDev) {
-		animateProducts('.hw-list li','.how-it-works');
-		animateProducts('.testimonials .tt-info','.testimonials');
+		// animateProducts('.hw-list li','.how-it-works');
+		animateProducts('.partner_img','.partners', 0.15, 60, 200);
+		animateProducts('.au_list-title','.about-us');
+		animateProducts('.au_list li','.about-us');
+		animateProducts('.au_btn','.about-us');
 		
-		addAnimateClass('.solutions .svg_item','.solutions');
+		animateProducts('.solution_item','.solutions');
+		animateProducts('.solutions .btn_main','.solutions');
+		
+		animateProducts('.how-it-works .hw_num','.how-it-works');
+		animateProducts('.how-it-works .hw_info','.how-it-works', 0.15,60,500,1);
+		
+		animateProducts('.pricing .pp_item','.pricing');
+		animateProducts('.pricing .pi_wrap','.pricing');
+		
+		// addAnimateClass('.solutions .svg_item','.solutions');
 		
 	} else {
 		$('body').addClass('show-svg');

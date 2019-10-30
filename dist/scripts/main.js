@@ -85,21 +85,33 @@ function addAnimateClass(productAnimate, productCover) {
 
 // Parallax animation end
 
-var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-// var mobDev = false;
+// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+var mobDev = false;
 
 $(document).ready(function () {
 
 	// Animation just for web start
 
 	if (!mobDev) {
-		animateProducts('.hw-list li', '.how-it-works');
-		animateProducts('.testimonials .tt-info', '.testimonials');
+		// animateProducts('.hw-list li','.how-it-works');
+		animateProducts('.partner_img', '.partners', 0.15, 60, 200);
+		animateProducts('.au_list-title', '.about-us');
+		animateProducts('.au_list li', '.about-us');
+		animateProducts('.au_btn', '.about-us');
 
-		addAnimateClass('.solutions .svg_item', '.solutions');
+		animateProducts('.solution_item', '.solutions');
+		animateProducts('.solutions .btn_main', '.solutions');
+
+		animateProducts('.how-it-works .hw_num', '.how-it-works');
+		animateProducts('.how-it-works .hw_info', '.how-it-works', 0.15, 60, 500, 1);
+
+		animateProducts('.pricing .pp_item', '.pricing');
+		animateProducts('.pricing .pi_wrap', '.pricing');
+
+		// addAnimateClass('.solutions .svg_item','.solutions');
 	} else {
-		$('body').addClass('show-svg');
-	}
+			$('body').addClass('show-svg');
+		}
 
 	// Animation just for web end
 
@@ -135,22 +147,48 @@ $(document).ready(function () {
 });
 
 ;function parallaxScroll(coverSection, parallaxItem) {
-	var yAnimate = arguments.length <= 2 || arguments[2] === undefined ? '-10%' : arguments[2];
+	var yAnimate = arguments.length <= 2 || arguments[2] === undefined ? '-20%' : arguments[2];
+	var yStart = arguments.length <= 3 || arguments[3] === undefined ? 0 : arguments[3];
+	var offsetTop = arguments.length <= 4 || arguments[4] === undefined ? 0 : arguments[4];
+	var mainDur = arguments.length <= 5 || arguments[5] === undefined ? '200%' : arguments[5];
 
 	var cSection = coverSection,
 	    pItem = parallaxItem,
-	    controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "400%" } });
+	    controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: mainDur } });
+
+	TweenMax.set(pItem, {
+		y: yStart
+	});
 
 	// build scenes
-	new ScrollMagic.Scene({ triggerElement: cSection }).setTween(pItem, { y: yAnimate, ease: Linear.easeNone }).addTo(controller);
+	new ScrollMagic.Scene({
+		triggerElement: cSection,
+		offset: offsetTop
+	}).setTween(pItem, { y: yAnimate, ease: Linear.easeNone }).setClassToggle(pItem, "active-parallax").on("end", function (e) {
+		$(pItem).toggleClass('end-parallax');
+	}).addTo(controller);
 }
 
 if (!mobDev) {
-	parallaxScroll('.how-it-works', '.hw-img1 img', '-7%');
-	parallaxScroll('.how-it-works', '.hw-img2 img');
-	parallaxScroll('.how-it-works', '.hw-img3 img', '-12%');
 
-	parallaxScroll('.img-section', '.ims-img1 img', '-7%');
-	parallaxScroll('.img-section', '.ims-img2 img', '-12%');
-	parallaxScroll('.img-section', '.ims-img3 img, .ims-img4 img');
+	parallaxScroll('.about-us', '.about-us .bg-icon1', '15%');
+	parallaxScroll('.about-us', '.about-us .bg-icon2');
+	parallaxScroll('.about-us', '.about-us .bg-circle1', '-5%');
+	parallaxScroll('.about-us', '.about-us .bg-circle2', '10%');
+
+	parallaxScroll('.solutions', '.solutions .bg-icon1', '15%');
+	parallaxScroll('.solutions', '.solutions .bg-icon2');
+	parallaxScroll('.solutions', '.solutions .bg-icon3', '-5%');
+
+	parallaxScroll('.how-it-works', '.how-it-works .bg-icon3', '15%');
+	parallaxScroll('.how-it-works', '.how-it-works .bg-icon1');
+	parallaxScroll('.how-it-works', '.how-it-works .bg-icon2', '-5%');
+
+	parallaxScroll('.pricing', '.pricing .bg-icon1');
+	parallaxScroll('.pricing', '.pricing .bg-icon2', '10%');
+	parallaxScroll('.pricing', '.pricing .bg-circle1', '15%');
+
+	parallaxScroll('.cta', '.cta .bg-icon1');
+	parallaxScroll('.cta', '.cta .bg-icon2', '10%');
+	parallaxScroll('.cta', '.cta .bg-circle1', '15%');
 }
