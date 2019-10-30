@@ -54,39 +54,10 @@ function animateProducts(productAnimate, productCover) {
 	}).setTween(tl).addTo(controller);
 }
 
-function addAnimateClass(productAnimate, productCover) {
-	var classItem = arguments.length <= 2 || arguments[2] === undefined ? 'svg_anim' : arguments[2];
-	var offsetTop = arguments.length <= 3 || arguments[3] === undefined ? 500 : arguments[3];
-	var durItem = arguments.length <= 4 || arguments[4] === undefined ? 0.5 : arguments[4];
-	var delayItem = arguments.length <= 5 || arguments[5] === undefined ? 0.15 : arguments[5];
-
-	var productItem = productAnimate;
-	var section = productCover;
-
-	if (!$(section).length) {
-		return;
-	}
-
-	var tl = new TimelineMax().staggerTo(productItem, durItem, { css: { className: '+=' + classItem } }, delayItem);
-
-	var controller = new ScrollMagic.Controller({
-		globalSceneOptions: {
-			triggerHook: 'onEnter'
-		}
-	});
-
-	// build scenes
-	new ScrollMagic.Scene({
-		triggerElement: section,
-		offset: offsetTop,
-		reverse: true
-	}).setTween(tl).addTo(controller);
-}
-
 // Parallax animation end
 
-// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-var mobDev = false;
+var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+// var mobDev = false;
 
 $(document).ready(function () {
 
@@ -107,11 +78,9 @@ $(document).ready(function () {
 
 		animateProducts('.pricing .pp_item', '.pricing');
 		animateProducts('.pricing .pi_wrap', '.pricing');
-
-		// addAnimateClass('.solutions .svg_item','.solutions');
 	} else {
-			$('body').addClass('show-svg');
-		}
+		$('body').addClass('show-svg');
+	}
 
 	// Animation just for web end
 

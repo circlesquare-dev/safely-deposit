@@ -48,38 +48,11 @@
 		}).setTween(tl).addTo(controller);
 	
 	}
-	
-	function addAnimateClass(productAnimate, productCover, classItem = 'svg_anim', offsetTop = 500, durItem = 0.5, delayItem = 0.15) {
-		
-		var productItem = productAnimate;
-		var section = productCover;
-		
-		if (!$(section).length) {
-			return;
-		}
-		
-		const tl = new TimelineMax()
-		.staggerTo(productItem, durItem, {css:{className:'+=' + classItem}}, delayItem);
-		
-		var controller = new ScrollMagic.Controller({
-			globalSceneOptions: {
-				triggerHook: 'onEnter'
-			}
-		});
-		
-		// build scenes
-		new ScrollMagic.Scene({
-			triggerElement: section,
-			offset: offsetTop,
-			reverse: true
-		}).setTween(tl).addTo(controller);
-		
-	}
 
 // Parallax animation end
 
-// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-var mobDev = false;
+var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+// var mobDev = false;
 
 $(document).ready( function(){
 
@@ -100,8 +73,6 @@ $(document).ready( function(){
 		
 		animateProducts('.pricing .pp_item','.pricing');
 		animateProducts('.pricing .pi_wrap','.pricing');
-		
-		// addAnimateClass('.solutions .svg_item','.solutions');
 		
 	} else {
 		$('body').addClass('show-svg');
