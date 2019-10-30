@@ -1,6 +1,8 @@
 .pricing
   background: $blueDark
   padding: 90px 0 103px
+  position: relative
+  overflow: hidden
   @media(max-width: 768px)
     padding: 45px 0 20px
   &, .h-title
@@ -9,6 +11,48 @@
     margin-bottom: 68px
     @media(max-width: 768px)
       margin-bottom: 40px
+
+  .bg-icons
+    .bg-icon
+      background: url('../images/paper.svg') center center no-repeat
+      background-size: contain
+      opacity: 0.1
+    .bg-icon1
+      top: -171px
+      left: 191px
+      width: 282px
+      height: 297px
+    .bg-icon2
+      bottom: 256px
+      right: -194px
+      width: 282px
+      height: 297px
+    .bg-circle1
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      &:before
+        content: ''
+        position: absolute
+        right: 81px
+        top: 108px
+        border: 5px solid $blue
+        width: 35px
+        height: 35px
+        border-radius: 100%
+        opacity: 1
+      &:after
+        content: ''
+        position: absolute
+        left: 73px
+        bottom: 50%
+        border: 5px solid $blue
+        width: 27px
+        height: 27px
+        border-radius: 100%
+        opacity: 1
 
 .pp
   &_wrap
@@ -99,7 +143,37 @@
     background: $pink
     text-align: center
     overflow: hidden
+    position: relative
     color: $main
+
+    .bg-icons_min
+      position: absolute
+      pointer-events: none
+      z-index: 0
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      .bg-icon_min
+        position: absolute
+        background: url('../images/paper-dark.svg') center center no-repeat
+        background-size: contain
+        opacity: 0.1
+        width: 162px
+        height: 171px
+      .bg-icon_min1
+        top: -127px
+        left: 207px
+      .bg-icon_min2
+        bottom: -116px
+        left: -67px
+      .bg-icon_min3
+        top: -115px
+        right: -50px
+      .bg-icon_min4
+        bottom: -116px
+        right: 260px
+
     @media(max-width: 768px)
       padding: 50px 30px
       text-align: center

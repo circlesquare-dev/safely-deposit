@@ -1,8 +1,53 @@
 .cta
+  margin-top: -1px
   background: $blueDark
   padding: 31px 0 75px
+  position: relative
   @media(max-width: 768px)
     padding: 50px 0 90px
+
+  .bg-icons
+    .bg-icon
+      background: url('../images/paper.svg') center center no-repeat
+      background-size: contain
+      opacity: 0.1
+    .bg-icon1
+      top: -128px
+      left: 36px
+      width: 282px
+      height: 297px
+    .bg-icon2
+      bottom: -222px
+      right: 269px
+      width: 282px
+      height: 297px
+    .bg-circle1
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      &:before
+        content: ''
+        position: absolute
+        right: 138px
+        top: 31px
+        border: 5px solid $blue
+        width: 34px
+        height: 34px
+        border-radius: 100%
+        opacity: 1
+      &:after
+        content: ''
+        position: absolute
+        left: 323px
+        bottom: 94px
+        border: 5px solid $blue
+        width: 27px
+        height: 27px
+        border-radius: 100%
+        opacity: 1
+
   .h-title
     margin-bottom: 40px
     color: #fff

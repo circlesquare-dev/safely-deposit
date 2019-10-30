@@ -1,10 +1,78 @@
 .about-us
   padding: 85px 0 34px
   background: $blueDark
+  position: relative
+  overflow: hidden
   @media(max-width: 768px)
     padding: 50px 0
   &, .h-title
     color: #fff
+
+  .bg-icons
+    z-index: 2
+    .bg-icon
+      background: url('../images/paper.svg') center center no-repeat
+      background-size: contain
+      opacity: 0.1
+    .bg-icon1
+      top: 49px
+      left: -103px
+      width: 250px
+      height: 263px
+    .bg-icon2
+      bottom: -18px
+      right: -142px
+      width: 283px
+      height: 297px
+    .bg-circle1, .bg-circle2
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+    .bg-circle1
+      &:before
+        content: ''
+        position: absolute
+        left: 128px
+        top: 62px
+        border: 5px solid $blue
+        width: 28px
+        height: 28px
+        border-radius: 100%
+        opacity: 1
+      &:after
+        content: ''
+        position: absolute
+        left: -19px
+        bottom: 152px
+        border: 5px solid $blue
+        width: 38px
+        height: 38px
+        border-radius: 100%
+        opacity: 1
+    .bg-circle2
+      &:before
+        content: ''
+        position: absolute
+        right: -20px
+        top: 181px
+        border: 5px solid $blue
+        width: 38px
+        height: 38px
+        border-radius: 100%
+        opacity: 1
+      &:after
+        content: ''
+        position: absolute
+        right: 259px
+        bottom: -19px
+        border: 5px solid $blue
+        width: 54px
+        height: 54px
+        border-radius: 100%
+        opacity: 1
+
 .au
   &_title-info
     margin-bottom: 60px
