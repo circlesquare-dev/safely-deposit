@@ -5427,6 +5427,25 @@ html
 
         flex: 0 0 auto;
 }
+.preloader__ico img
+{
+    width: 30px;
+    height: auto;
+
+    animation: moveImg 2s ease infinite;
+}
+
+@keyframes moveImg
+{
+    from
+    {
+        transform: rotateY(0);
+    }
+    to
+    {
+        transform: rotateY(-360deg);
+    }
+}
 
 .btn_wrap,
 .btn_main,
