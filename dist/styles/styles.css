@@ -6529,10 +6529,6 @@ body .screen-height
         display: none;
     }
 }
-.hw_items div[class|='col']:last-child .hw_item
-{
-    borde: 1px solid #000;
-}
 .hw_items div[class|='col']:last-child .hw_item:after
 {
     display: none !important;
