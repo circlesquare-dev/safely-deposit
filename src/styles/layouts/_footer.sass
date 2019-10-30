@@ -1,55 +1,74 @@
 footer
-  padding: 32px 0
+  padding: 55px 0 144px
   background: $blue
+  color: #fff
+  font-size: 13px
+  line-height: 23px
+  letter-spacing: 0.361111px
+  @media(max-width: 768px)
+    padding: 55px 0 20px
+  a
+    color: #fff
+    text-decoration: none
+    transition: color 300ms ease-out
+    font-size: 13px
+    line-height: 23px
+    letter-spacing: 0.361111px
+    &:hover
+      color: $main
 
 .footer
-  @media(max-width: 768px)
-    text-align: center
-  &-logo
+
+  &_logo
+    &-wrap
+      @media(max-width: 992px)
+        margin-bottom: 50px
     display: inline-block
-    line-height: 0
-    @media(max-width: 768px)
-      text-align: center
-      margin-bottom: 30px
+    margin-bottom: 34px
     img
-      min-width: 55px
-      max-height: 60px
+      width: 150px
+      height: auto
+  &_address
+    margin-bottom: 16px
 
-  &_links
-    text-align: right
+  &_menu
+    display: flex
+    width: 100%
+    justify-content: flex-end
+    flex-wrap: wrap
+    @media(max-width: 992px)
+      justify-content: space-between
+
+.fl
+  padding-left: 100px
+  @media(max-width: 992px)
+    padding-left: 30px
+  @media(max-width: 767px)
+    padding-left: 0
+    margin-bottom: 40px
+    max-width: 40%
+    flex: 0 0 40%
+  &:first-child
+    padding-left: 0
+  &_title
+    margin-bottom: 26px
     @media(max-width: 768px)
-      display: inline-block
-      text-align: center
-    a
-      display: inline-block
-      vertical-align: middle
-      font-family: $f-main
-      font-weight: $reg
-      font-size: 16px
-      line-height: 24px
-      color: #000
-      text-decoration: none
-      transition: opacity 300ms ease-out
-      margin-left: 64px
-      @media(max-width: 1024px)
-        margin-left: 45px
-      &:first-child
-        margin-left: 0
-      &:hover
-        opacity: 0.7
-
-.social-icons
-  @media(max-width: 768px)
-    display: inline-block
-    margin-bottom: 30px
-  a
-    display: inline-block
-    margin-right: 45px
-    vertical-align: middle
-    transition: opacity 300ms ease-out
-    @media(max-width: 1024px)
-      margin-right: 35px
-    &:last-child
-      margin-right: 0
-    &:hover
-      opacity: 0.7
+      text-align: left
+      margin-bottom: 20px
+    & *
+      font-weight: $bd
+      font-size: 15px
+      line-height: 23px
+      letter-spacing: 0.416667px
+      color: #fff
+  &_links
+    padding: 0
+    margin: 0
+    list-style: none
+    li
+      display: block
+      margin-bottom: 12px
+      @media(max-width: 768px)
+        text-align: left
+      &:last-child
+        margin-bottom: 0

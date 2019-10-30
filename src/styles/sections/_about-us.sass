@@ -1,11 +1,15 @@
 .about-us
   padding: 85px 0 34px
   background: $blueDark
+  @media(max-width: 768px)
+    padding: 50px 0
   &, .h-title
     color: #fff
 .au
   &_title-info
     margin-bottom: 60px
+    @media(max-width: 768px)
+      margin-bottom: 50px
     p
       font-weight: $reg
       font-size: 25px
@@ -13,10 +17,14 @@
       letter-spacing: 0.56px
       margin: 0
       padding: 0
+      @media(max-width: 768px)
+        font-size: 18px
+        line-height: 36px
+        letter-spacing: 0.4px
 
   &_list-title
-    @media(max-width: 768px)
-      margin-bottom: 50px
+    @media(max-width: 820px)
+      margin-bottom: 30px
       text-align: center
     .h-title
       margin-bottom: 10px
@@ -41,6 +49,24 @@
         font-size: 20px
         line-height: 33px
         letter-spacing: 0.555556px
+        padding-left: 40px
+        position: relative
+        @media(max-width: 768px)
+          font-size: 15px
+          line-height: 33px
+        &:before
+          content: ''
+          width: 25px
+          height: 25px
+          background: rgba($pinkDark, 0.3) url('../images/check.svg') center 4px no-repeat
+          position: absolute
+          left: 0
+          top: 6px
+          border-radius: 100%
+        a
+          color: $pinkDark
+          &:hover
+            text-decoration: none
         @media(max-width: 767px)
           min-width: 100%
           flex: 0 1 100%
@@ -48,8 +74,14 @@
   &_btn
     margin-top: 73px
     text-align: center
+    @media(max-width: 820px)
+      margin-top: 50px
+    @media(max-width: 768px)
+      margin-top: 20px
     .btn_main
       margin-bottom: 38px
+      @media(max-width: 768px)
+        width: 100%
 
     .small-info
       font-size: 13px

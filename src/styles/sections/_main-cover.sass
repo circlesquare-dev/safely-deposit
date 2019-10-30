@@ -1,7 +1,10 @@
 .main-cover
   background: $grayLight
   position: relative
-  padding: 150px 0 80px
+  @media(max-width: 992px)
+    padding: 150px 0 80px
+  @media(max-width: 768px)
+    padding: 40px 0
   &, .main-row
     height: 640px
     @media(max-width: 992px)
@@ -13,8 +16,13 @@
       max-width: 100%
 
   &_title
+    @media(max-width: 768px)
+      margin-bottom: 50px
+      text-align: center
     .h1-title
       margin-bottom: 22px
+      @media(max-width: 768px)
+        margin-bottom: 15px
 
   &_info
     margin-bottom: 30px

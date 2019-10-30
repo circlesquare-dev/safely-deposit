@@ -1,0 +1,121 @@
+.pricing
+  background: $blueDark
+  padding: 90px 0 103px
+  @media(max-width: 768px)
+    padding: 45px 0 20px
+  &, .h-title
+    color: #fff
+  &_title
+    margin-bottom: 68px
+    @media(max-width: 768px)
+      margin-bottom: 40px
+
+.pp
+  &_wrap
+    margin-bottom: 30px
+
+  &_info-wrap, &_btn
+    max-width: 100%
+    flex: 0 0 100%
+    text-align: center
+
+  &_title
+    margin-bottom: 15px
+    & *
+      font-weight: $med
+      font-size: 20px
+      line-height: 55px
+      letter-spacing: 0.444444px
+  &_price
+    margin-bottom: 40px
+    .currency
+      font-size: 13px
+      line-height: 36px
+      letter-spacing: 0.361111px
+      vertical-align: top
+    .price
+      display: inline-block
+      padding: 0 2px 0 6px
+      font-weight: $med
+      font-size: 50px
+      line-height: 50px
+      letter-spacing: 1.11111px
+    .period
+      font-size: 13px
+      line-height: 23px
+      letter-spacing: 0.361111px
+
+  &_list
+    text-align: left
+    ul
+      display: block
+      list-style: none
+      padding: 0
+      margin: 0 0 40px
+      li
+        padding-left: 20px
+        display: block
+        position: relative
+        margin-bottom: 20px
+        font-size: 13px
+        line-height: 23px
+        letter-spacing: 0.361111px
+        &:before
+          content: ''
+          width: 7px
+          height: 7px
+          position: absolute
+          left: 0
+          top: 9px
+          background: $blue
+          border-radius: 100%
+  &_btn
+    align-self: flex-end
+
+  &_item
+    padding: 20px 30px 64px
+    height: 100%
+    background: #fff
+    color: $main
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-content: space-between
+    &-wrap
+      @media(max-width: 768px)
+        margin-bottom: 40px
+    &.active
+      background: $blue
+      &, .pp_title *
+        color: #fff
+      .pp_list
+        li
+          &:before
+            background: #fff
+
+.pi
+  &_wrap
+    padding: 50px 0
+    background: $pink
+    text-align: center
+    overflow: hidden
+    color: $main
+    @media(max-width: 768px)
+      padding: 50px 30px
+      text-align: center
+  &_title
+    display: inline-block
+    @media(max-width: 768px)
+      margin-bottom: 32px
+    &-h
+      font-weight: $med
+      font-size: 20px
+      line-height: 55px
+      letter-spacing: 0.444444px
+      color: $main
+  &_info
+    text-align: left
+    @media(max-width: 768px)
+      text-align: center
+      margin-bottom: 48px
+  &_btn
