@@ -56,8 +56,8 @@ function animateProducts(productAnimate, productCover) {
 
 // Parallax animation end
 
-var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-// var mobDev = false;
+// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+var mobDev = false;
 
 $(document).ready(function () {
 
@@ -66,18 +66,15 @@ $(document).ready(function () {
 	if (!mobDev) {
 		// animateProducts('.hw-list li','.how-it-works');
 		animateProducts('.partner_img', '.partners', 0.15, 60, 200);
-		animateProducts('.au_list-title', '.about-us');
-		animateProducts('.au_list li', '.about-us');
-		animateProducts('.au_btn', '.about-us');
 
-		animateProducts('.solution_item', '.solutions');
-		animateProducts('.solutions .btn_main', '.solutions');
+		animateProducts('.about-us .fade-up', '.about-us');
+
+		animateProducts('.solutions .fade-up', '.solutions');
 
 		animateProducts('.how-it-works .hw_num', '.how-it-works');
 		animateProducts('.how-it-works .hw_info', '.how-it-works', 0.15, 60, 500, 1);
 
-		animateProducts('.pricing .pp_item', '.pricing');
-		animateProducts('.pricing .pi_wrap', '.pricing');
+		animateProducts('.pricing .fade-up', '.pricing');
 	} else {
 		$('body').addClass('show-svg');
 	}
