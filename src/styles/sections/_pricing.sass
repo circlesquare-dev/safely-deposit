@@ -134,6 +134,9 @@
           border-radius: 100%
   &_btn
     align-self: flex-end
+    @media(max-width: 991px)
+      .btn_main, .btn_white
+        padding: 17px 30px
 
   &_item
     padding: 20px 30px 64px
@@ -144,6 +147,8 @@
     flex-direction: row
     flex-wrap: wrap
     align-content: space-between
+    @media(max-width: 991px)
+      padding: 20px 15px 40px
     &-wrap
       @media(max-width: 768px)
         margin-bottom: 40px
@@ -205,22 +210,21 @@
         @media(max-width: 736px)
           display: none
 
-    @media(max-width: 768px)
-      padding: 50px 30px
+    @media(max-width: 991px)
+      padding: 40px 30px
       text-align: center
   &_title
     display: inline-block
-    @media(max-width: 768px)
-      margin-bottom: 32px
+    @media(max-width: 991px)
+      margin-bottom: 44px
     &-h
       font-weight: $med
       font-size: 20px
-      line-height: 55px
+      line-height: 30px
       letter-spacing: 0.444444px
       color: $main
   &_info
     text-align: left
-    @media(max-width: 768px)
+    @media(max-width: 991px)
       text-align: center
       margin-bottom: 48px
-  &_btn

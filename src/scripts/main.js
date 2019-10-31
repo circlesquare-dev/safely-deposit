@@ -12,7 +12,7 @@
 
 // Parallax amination start
 
-	function animateProducts(productAnimate, productCover, delayItem = 0.15, yAnimation = 60, topOffset = 500, mainDelay = 0.25) {
+	function animateProducts(productAnimate, productCover, delayItem = 0.10, yAnimation = 60, topOffset = 400, mainDelay = 0.15) {
 		var productItem = productAnimate;
 		var section = productCover;
 		
@@ -59,15 +59,14 @@ $(document).ready( function(){
 // Animation just for web start
 	
 	if (!mobDev) {
-		// animateProducts('.hw-list li','.how-it-works');
-		animateProducts('.partner_img','.partners', 0.15, 60, 200);
+		// animateProducts('.partner_img','.partners', 0.15, 60, 200);
 		
-		animateProducts('.about-us .fade-up','.about-us');
+		// animateProducts('.about-us .fade-up','.about-us');
 		
 		animateProducts('.solutions .fade-up','.solutions');
 		
-		animateProducts('.how-it-works .hw_num','.how-it-works');
-		animateProducts('.how-it-works .hw_info','.how-it-works', 0.15,60,500,1);
+		// animateProducts('.how-it-works .hw_num','.how-it-works');
+		// animateProducts('.how-it-works .hw_info','.how-it-works', 0.15,60,500,1);
 		
 		animateProducts('.pricing .fade-up','.pricing');
 		
