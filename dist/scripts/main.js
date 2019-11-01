@@ -4,7 +4,7 @@
 
 $('.preloader__ico').fadeIn('slow');
 
-$(window).load(function () {
+$(window).on('load', function () {
 	setTimeout(function () {
 		$('.preloader').fadeOut('slow');
 	}, 1000);
