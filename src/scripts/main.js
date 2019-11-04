@@ -51,22 +51,15 @@
 
 // Parallax animation end
 
-// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-var mobDev = false;
+var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+// var mobDev = false;
 
 $(document).ready( function(){
 
 // Animation just for web start
 	
 	if (!mobDev) {
-		// animateProducts('.partner_img','.partners', 0.15, 60, 200);
-		
-		// animateProducts('.about-us .fade-up','.about-us');
-		
 		animateProducts('.solutions .fade-up','.solutions');
-		
-		// animateProducts('.how-it-works .hw_num','.how-it-works');
-		// animateProducts('.how-it-works .hw_info','.how-it-works', 0.15,60,500,1);
 		
 		animateProducts('.pricing .fade-up','.pricing');
 		
@@ -75,18 +68,6 @@ $(document).ready( function(){
 	}
 	
 // Animation just for web end
-
-// Smooth anchor scroll start
-	
-	// $(document).on('click', 'a[href^="#"]', function (event) {
-	// 	event.preventDefault();
-	//
-	// 	$('html, body').animate({
-	// 		scrollTop: $($.attr(this, 'href')).offset().top
-	// 	}, 500);
-	// });
-	
-// Smooth anchor scroll end
 
 // Hamburger menu start
 	
