@@ -491,6 +491,7 @@ th
 
     justify-content: center;
     align-items: center;
+    perspective: 1000px;
 }
 
 .preloader__ico
@@ -504,31 +505,18 @@ th
     width: 30px;
     height: auto;
 
-    -webkit-animation: moveImg 2s ease infinite;
-            animation: moveImg 2s ease infinite;
-}
-
-@-webkit-keyframes moveImg
-{
-    from
-    {
-        -webkit-transform: rotateY(0);
-    }
-    to
-    {
-        -webkit-transform: rotateY(-360deg);
-    }
+    animation: moveImg 2s ease infinite;
 }
 
 @keyframes moveImg
 {
     from
     {
-        transform: rotateY(0);
+        transform: rotateY(0) translate3d(0, 0, 0) scale(1);
     }
     to
     {
-        transform: rotateY(-360deg);
+        transform: rotateY(-360deg) translate3d(0, 0, 0) scale(1);
     }
 }
 
