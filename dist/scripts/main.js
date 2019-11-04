@@ -95,7 +95,7 @@ $(document).ready(function () {
 	// Hamburger menu start
 
 	$('.hamburger').on('click', function () {
-		var $containerMob = $('.main-header_d-menu');
+		var $containerMob = $('.main-header');
 		var $mobMenu = $('.mob-menu');
 		var $thisActive = $containerMob.hasClass('active');
 

@@ -16,15 +16,21 @@
   img
     width: 30px
     height: auto
+    -webkit-animation: moveImg 2s ease infinite
     animation: moveImg 2s ease infinite
+
+@-webkit-keyframes moveImg
+  from
+    -webkit-transform: rotateY(0)
+  to
+    -webkit-transform: rotateY(-360deg)
 
 @keyframes moveImg
   from
     transform: rotateY(0)
   to
     transform: rotateY(-360deg)
-  //to
-  //  transform: rotateY(0)
+
 .btn
   &_wrap
     display: inline-block

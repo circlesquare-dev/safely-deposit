@@ -54,7 +54,7 @@ gulp.task('styles', function(){
     }}))
     .pipe(sass())
     .pipe(csscomb())
-    .pipe(autoprefixer('last 2 versions'))
+    // .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('dist/styles/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())

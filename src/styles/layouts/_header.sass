@@ -21,6 +21,10 @@
     a
       text-decoration: none
 
+    .logo-w
+      display: none
+      //position: absolute
+      //left: 0
     img, svg
       width: auto
       height: 44px
@@ -88,15 +92,28 @@
     @media(max-width: 991px)
       display: block
 
+  &.active
+    @media(max-width: 400px)
+      .logo-m
+        display: none
+      .logo-w
+        display: block
+    .hamburger
+      span
+        background: #fff
+        &:first-child
+          transform: rotate(45deg) translate(7px, 7px)
+        &:nth-child(2)
+          opacity: 0
+        &:last-child
+          transform: rotate(-45deg) translate(3px, -3px)
+
 .hamburger
   position: relative
   z-index: 2
   display: inline-block
   vertical-align: middle
   cursor: pointer
-  &.active
-    span
-      background: #f00
   span
     display: block
     width: 30px
@@ -105,6 +122,9 @@
     border-radius: 3px
     margin-bottom: 5px
     transition: transform 300ms ease-out
+  &.active
+    span
+      background: #fff
 
 .mob-menu
   position: absolute
@@ -113,7 +133,7 @@
   top: 0
   width: 300px
   height: 100vh
-  background: #fff
+  background: $blueDark
   padding: 120px 40px
   box-shadow: 0 10px 20px rgba($main, 0)
   opacity: 0
@@ -146,21 +166,11 @@
         text-transform: uppercase
         text-decoration: none
         padding: 0 5px
-        color: $main
+        color: #fff
         transition: color 300ms ease-out, background 300ms ease-out
         &:hover, &:focus
-          color: $blue
+          color: $pink
         &.active
           pointer-events: none
-          background: $grayLight
+          color: $pink
 
-.main-header_d-menu
-  &.active
-    .hamburger
-      span
-        &:first-child
-          transform: rotate(45deg) translate(7px, 7px)
-        &:nth-child(2)
-          opacity: 0
-        &:last-child
-          transform: rotate(-45deg) translate(3px, -3px)
