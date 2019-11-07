@@ -73,6 +73,16 @@ $(document).ready(function () {
 
 	// Animation just for web end
 
+	// Smooth scroll start
+	$(document).on('click', 'a[href^="#"]', function (event) {
+		event.preventDefault();
+
+		$('html, body').animate({
+			scrollTop: $($.attr(this, 'href')).offset().top
+		}, 500);
+	});
+	// Smooth scroll end
+
 	// Hamburger menu start
 
 	$('.hamburger').on('click', function () {
